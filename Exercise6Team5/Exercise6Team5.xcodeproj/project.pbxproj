@@ -12,6 +12,8 @@
 		FE2E2E2E216FF039003EE8F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2E2E2C216FF039003EE8F2 /* Main.storyboard */; };
 		FE2E2E30216FF03A003EE8F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2E2E2F216FF03A003EE8F2 /* Assets.xcassets */; };
 		FE2E2E33216FF03A003EE8F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2E2E31216FF03A003EE8F2 /* LaunchScreen.storyboard */; };
+		FE2E2E3B216FFFEE003EE8F2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2E2E3A216FFFEE003EE8F2 /* TableViewController.swift */; };
+		FE2E2E3E21700138003EE8F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2E2E3D21700138003EE8F2 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FE2E2E2F216FF03A003EE8F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE2E2E32216FF03A003EE8F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE2E2E34216FF03A003EE8F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE2E2E3A216FFFEE003EE8F2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FE2E2E3D21700138003EE8F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2E2E3E21700138003EE8F2 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				FE2E2E27216FF039003EE8F2 /* Exercise6Team5 */,
 				FE2E2E26216FF039003EE8F2 /* Products */,
+				FE2E2E3C21700138003EE8F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +62,21 @@
 			children = (
 				FE2E2E28216FF039003EE8F2 /* AppDelegate.swift */,
 				FE2E2E2A216FF039003EE8F2 /* ViewController.swift */,
+				FE2E2E3A216FFFEE003EE8F2 /* TableViewController.swift */,
 				FE2E2E2C216FF039003EE8F2 /* Main.storyboard */,
 				FE2E2E2F216FF03A003EE8F2 /* Assets.xcassets */,
 				FE2E2E31216FF03A003EE8F2 /* LaunchScreen.storyboard */,
 				FE2E2E34216FF03A003EE8F2 /* Info.plist */,
 			);
 			path = Exercise6Team5;
+			sourceTree = "<group>";
+		};
+		FE2E2E3C21700138003EE8F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE2E2E3D21700138003EE8F2 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2E2E2B216FF039003EE8F2 /* ViewController.swift in Sources */,
+				FE2E2E3B216FFFEE003EE8F2 /* TableViewController.swift in Sources */,
 				FE2E2E29216FF039003EE8F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
