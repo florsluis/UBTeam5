@@ -96,7 +96,7 @@ class TableViewController: UITableViewController {
         
         if segue.identifier == "detailedSegue" {
             let dvc = segue.destination as! ViewController
-            dvc.location = selectedLocation
+            dvc.selectedLocation = selectedLocation
         }
     }
 }
