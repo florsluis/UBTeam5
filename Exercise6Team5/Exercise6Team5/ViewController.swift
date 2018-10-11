@@ -55,7 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print("Error")
             } else {
                 if let place = placemark?[0] {
-                    if let city = place.subAdministrativeArea {
+                    if let city = place.locality {
                         if let state = place.administrativeArea {
                             if let country = place.country {
                                 annotation.subtitle = "\(city), \(state), \(country)"
