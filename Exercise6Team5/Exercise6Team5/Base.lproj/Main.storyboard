@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="th4-95-t3Y">
-                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="th4-95-t3Y">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="th4-95-t3Y" id="jRB-rX-VR8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eI-Ds-hwT">
-                                            <rect key="frame" x="126.5" y="32.5" width="122.5" height="20.5"/>
+                                            <rect key="frame" x="126.5" y="29.5" width="122.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -68,13 +68,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oWJ-DV-zsD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KGp-hO-aPN"/>
                             <constraint firstItem="oWJ-DV-zsD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Uuj-oM-kJ2"/>
                             <constraint firstItem="oWJ-DV-zsD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n50-sZ-NHE"/>
+                            <constraint firstItem="oWJ-DV-zsD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wU9-VI-xjs"/>
                             <constraint firstItem="oWJ-DV-zsD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y6u-XE-QbA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="detailMap" destination="oWJ-DV-zsD" id="MB3-DV-uek"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
