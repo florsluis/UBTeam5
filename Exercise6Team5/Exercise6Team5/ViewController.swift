@@ -59,42 +59,37 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         if let state = place.administrativeArea {
                             if let country = place.country {
                                 annotation.subtitle = "\(city), \(state), \(country)"
-                            }
-                            
-                            
-                        }
-                    }
-                    
-                }
-            }
-        }
+                            }}}}}}
+        
+        
 //        annotation.subtitle =
         detailMap.addAnnotation(annotation)
         
-			let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addPin(press:)))
-	longPress.minimumPressDuration = 2.0
-	detailMap.addGestureRecognizer(longPress)
-	@objc func addPin(press: UILongPressGestureRecognizer)
-	{
-		if press.state == .began
-		{
-			let placedLocation = press.location(in: detailMap)
-			let placedCoordinates = detailMap.convert(location, toCoordinateForm: detailMap)
-			let placedAnnotation = MKPointAnnotation()
-			placedAnnotation.coordinate = placedCoordinates
-			placedAnnotation.title = "\(placedCoordinates.latitude),\(placedCoordinates.longitude)"
-			CLGeocoder().reverseGeocodeLocation(placedLocation){(placemark, error) in
-			if let place = placemark?[0]
-			{
-				string locationInfo = "\(place.city)", \(place.state), \(place.country)"
-			}
-			}
-			placedAnnotation.subtitle = locationInfo
-			detailMap.addAnnotation(placedAnnotation)
-		}
-	}
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addPin(press:)))
+        longPress.minimumPressDuration = 2.0
+        detailMap.addGestureRecognizer(longPress)
+        
     }
+    @objc func addPin(press: UILongPressGestureRecognizer) {
+        if press.state == .began
+        {
+            let placedLocation = press.location(in: detailMap)
+            let placedCoordinates = detailMap.convert(placedLocation, toCoordinateFrom: detailMap)
+            let placedLocationCL: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: placedCoordinates.latitude, longitude: placedCoordinates.longitude)
+            let placedAnnotation = MKPointAnnotation()
+            let placedLocationCL2: CLLocation = CLLocation(latitude: selectedLocation.hq_latitude, longitude: selectedLocation.hq_longitude)
 
+            placedAnnotation.title = "\(placedCoordinates.latitude), \(placedCoordinates.longitude)"
+            CLGeocoder().reverseGeocodeLocation(placedLocationCL2){(placemark, error) in
+                if let place = placemark?[0]
+                {
+                    string; locationInfo = "\(place.city), \(place.state), \(place.country)"
+                }
+            }
+            placedAnnotation.subtitle = locationInfo
+            detailMap.addAnnotation(placedAnnotation)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -119,4 +114,5 @@ extension ViewController: MKMapViewDelegate {
     return view
   }
 }
+
 
