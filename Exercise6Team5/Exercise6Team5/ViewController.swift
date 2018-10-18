@@ -61,58 +61,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                                 annotation.subtitle = "\(city), \(state), \(country)"
                             }}}}}}
         
-        
-//        annotation.subtitle =
-        detailMap.addAnnotation(annotation)
-        
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addPin(press:)))
-        longPress.minimumPressDuration = 2.0
-        detailMap.addGestureRecognizer(longPress)
-        
-    }
-    @objc func addPin(press: UILongPressGestureRecognizer) {
-        if press.state == .began
-        {
-            let placedLocation = press.location(in: detailMap)
-            let placedCoordinates = detailMap.convert(placedLocation, toCoordinateFrom: detailMap)
-            let placedLocationCL: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: placedCoordinates.latitude, longitude: placedCoordinates.longitude)
-            let placedAnnotation = MKPointAnnotation()
-            let placedLocationCL2: CLLocation = CLLocation(latitude: selectedLocation.hq_latitude, longitude: selectedLocation.hq_longitude)
 
-            placedAnnotation.title = "\(placedCoordinates.latitude), \(placedCoordinates.longitude)"
-            CLGeocoder().reverseGeocodeLocation(placedLocationCL2){(placemark, error) in
-                if let place = placemark?[0]
-                {
-                    string; locationInfo = "\(place.city), \(place.state), \(place.country)"
-                }
-            }
-            placedAnnotation.subtitle = locationInfo
-            detailMap.addAnnotation(placedAnnotation)
-        }
+        
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
+
+
+
 }
-
-extension ViewController: MKMapViewDelegate {
-  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    guard let annotation = nil
-    let identifier = "marker"
-    var view: MKMarkerAnnotationView
-    if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-      as? MKMarkerAnnotationView { 
-      dequeuedView.annotation = annotation
-      view = dequeuedView
-    } else {
-      view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-      view.canShowCallout = true
-      view.calloutOffset = CGPoint(x: -5, y: 5)
-      view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-    }
-    return view
-  }
-}
-
-
