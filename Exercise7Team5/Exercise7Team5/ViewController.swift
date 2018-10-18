@@ -44,6 +44,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         //Apply filters
         //store into array
         //call segue and pass array
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -57,6 +58,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
 
 //
+    //link the notification trigger
+    @IBAction func triggeredNotification(_ sender: Any)
+    {
+        let content = UNMutableNotificationContent()
+        content.title = "Alert"
+        content.subtitle = "5 seconds have passed"
+        content.body = "It's done"
+        content.badge = 1
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "timerComplete", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
 
 }
 
