@@ -11,23 +11,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Table Controller-->
         <scene sceneID="fbZ-lu-2FI">
             <objects>
-                <tableViewController id="UUK-uf-4aI" sceneMemberID="viewController">
+                <tableViewController id="UUK-uf-4aI" customClass="TableController" customModule="Exercise7Team5" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tfh-kU-Q0x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="178" id="SIx-dP-TfA">
+                            <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="178" id="SIx-dP-TfA">
                                 <rect key="frame" x="0.0" y="28" width="375" height="178"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SIx-dP-TfA" id="A6n-Zl-IJT">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="177.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rSw-to-MoH">
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rSw-to-MoH">
                                             <rect key="frame" x="0.0" y="5" width="176" height="167.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="176" id="SZU-Ku-3Fv"/>
@@ -37,7 +37,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lF1-N2-XpZ">
                                             <rect key="frame" x="210" y="45" width="149" height="88"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-Gn-B8K">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-Gn-B8K">
                                                     <rect key="frame" x="0.0" y="0.0" width="149" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38" id="9k3-wg-mgX"/>
@@ -47,14 +47,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-Cg-Yts">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-Cg-Yts">
                                                     <rect key="frame" x="33" y="48" width="116" height="40"/>
                                                     <color key="backgroundColor" red="0.16862745100000001" green="0.43529411759999997" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="a9Q-Pb-uUW"/>
                                                         <constraint firstAttribute="height" constant="40" id="sza-5N-PrG"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button">
+                                                    <state key="normal" title="Save">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
@@ -121,6 +121,9 @@
                                         <state key="normal" title="Filter Image">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bC-8h-Y28"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -144,7 +147,7 @@
                     <navigationItem key="navigationItem" id="N7x-jq-J1e"/>
                     <connections>
                         <outlet property="imageView" destination="ZLd-5L-7HO" id="pKy-p4-gqi"/>
-                        <segue destination="UUK-uf-4aI" kind="show" id="zpT-yu-V4H"/>
+                        <segue destination="UUK-uf-4aI" kind="show" identifier="filterSegue" id="zpT-yu-V4H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

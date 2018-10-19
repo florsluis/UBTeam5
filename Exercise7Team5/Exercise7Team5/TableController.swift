@@ -9,33 +9,61 @@
 import UIKit
 
 class TableController: UITableViewController {
-
+    
+    var originalImage: UIImage!
+    
+    var images = [UIImage]()
+//    let filterTypes = ["Black & White", "Sepia", "Noir"]
+    let filterTypes = ["Black & White"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        print("Before appending")
+        images.append(convertToBlack(image: originalImage))
+//        images.append(convertToSepia(image: originalImage))
+//        images.append(convertToNoir(image: originalImage))
+        print("After")
+        print(images.count)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return filterTypes.count
     }
+    
+    func  convertToBlack(image:UIImage) -> UIImage{
+        let ciBlackImage = CIImage(image: image)
+        let blackImage = ciBlackImage?.applyingFilter("CIColorControls", parameters:[kCIInputSaturationKey:0.0])
+        if blackImage != nil {
+            print("Not nil")
+        }
+        return UIImage(ciImage: blackImage!)
+    }
+    
+    func  convertToSepia(image:UIImage) -> UIImage{
+        let sepiaFilter = CIFilter(name : "CISepiaTone")
+        sepiaFilter?.setValue(image, forKey : kCIInputImageKey)
+        sepiaFilter?.setValue(1, forKey : kCIInputIntensityKey)
+        let sepiaOutput = sepiaFilter?.outputImage
+        return UIImage(ciImage : sepiaOutput!)
+    }
+    
+    func  convertToNoir(image:UIImage) -> UIImage{
+        let noirFilter = CIFilter(name : "CIPhotoEffectNoir")
+        noirFilter?.setValue(image, forKey : kCIInputImageKey)
+        noirFilter?.setValue(1, forKey : kCIInputIntensityKey)
+        let noirOutput = noirFilter?.outputImage
+        return UIImage(ciImage : noirOutput!)
+    }
+    
     //    func saveImageButton() {
     //        let imageData = UIImagePNGRepresentation(self.image.image!)
     //        let compressedImage = UIImage(data : imageData)
@@ -44,15 +72,21 @@ class TableController: UITableViewController {
     //        let okAction = UIAlertAction(title : "OK", style : .default, handler)
     //        self.present(alert, animated : true, completion : nil)
     //    }
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let imageContainer = cell.viewWithTag(1) as! UIImageView
+        let filterLabel = cell.viewWithTag(2) as! UILabel
+        
+        print(images.count)
+        
+        filterLabel.text = filterTypes[indexPath.row]
 
-        // Configure the cell...
-
+        
+        imageContainer.image = images[indexPath.row]
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

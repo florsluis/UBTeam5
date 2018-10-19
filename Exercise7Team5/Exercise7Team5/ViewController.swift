@@ -40,13 +40,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
     }
     
-    @IBAction func filterImageButton(_ sender: Any) {
-        //Apply filters
-        //store into array
-        //call segue and pass array
-        
+    @IBAction func btnFilter(_ sender: Any) {
+        performSegue(withIdentifier: "filterSegue", sender: self)
+
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "filterSegue" {
+            let filterSegue = segue.destination as! TableController
+             filterSegue.originalImage = imageView.image!
+    }
+
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imageView.image = image
@@ -59,17 +63,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
 //
     //link the notification trigger
-    @IBAction func triggeredNotification(_ sender: Any)
-    {
-        let content = UNMutableNotificationContent()
-        content.title = "Alert"
-        content.subtitle = "5 seconds have passed"
-        content.body = "It's done"
-        content.badge = 1
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        let request = UNNotificationRequest(identifier: "timerComplete", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-    }
+//    @IBAction func triggeredNotification(_ sender: Any)
+//    {
+//        let content = UNMutableNotificationContent()
+//        content.title = "Alert"
+//        content.subtitle = "5 seconds have passed"
+//        content.body = "It's done"
+//        content.badge = 1
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//        let request = UNNotificationRequest(identifier: "timerComplete", content: content, trigger: trigger)
+//        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+//    }
+
+
 
 }
 
