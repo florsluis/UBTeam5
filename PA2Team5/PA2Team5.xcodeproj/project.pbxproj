@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1DB056721824D18003A4A35 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB056621824D18003A4A35 /* CustomTableViewController.swift */; };
 		FE86872C218248ED004B32B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE86872B218248ED004B32B2 /* AppDelegate.swift */; };
 		FE86872E218248ED004B32B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE86872D218248ED004B32B2 /* ViewController.swift */; };
 		FE868731218248ED004B32B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE86872F218248ED004B32B2 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1DB056621824D18003A4A35 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		FE868728218248ED004B32B2 /* PA2Team5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PA2Team5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE86872B218248ED004B32B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE86872D218248ED004B32B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				FE86872B218248ED004B32B2 /* AppDelegate.swift */,
 				FE86872D218248ED004B32B2 /* ViewController.swift */,
+				F1DB056621824D18003A4A35 /* CustomTableViewController.swift */,
 				FE86872F218248ED004B32B2 /* Main.storyboard */,
 				FE868732218248EF004B32B2 /* Assets.xcassets */,
 				FE868734218248EF004B32B2 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE86872E218248ED004B32B2 /* ViewController.swift in Sources */,
+				F1DB056721824D18003A4A35 /* CustomTableViewController.swift in Sources */,
 				FE86872C218248ED004B32B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
