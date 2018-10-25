@@ -68,7 +68,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Contact Information" id="esb-JZ-C9Y"/>
                     <connections>
-                        <segue destination="g5w-M7-GND" kind="show" id="wbs-NJ-uRX"/>
+                        <segue destination="g5w-M7-GND" kind="show" identifier="listToDetails" id="wbs-NJ-uRX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vO2-Sg-mYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
