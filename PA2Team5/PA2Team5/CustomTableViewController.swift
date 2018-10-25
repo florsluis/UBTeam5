@@ -7,7 +7,7 @@
 struct Contact: Codable {
     let about: String
     let phone: String
-    let logo: String
+    let logo: URL
     let email: String
     let company: String
     let name: String
@@ -19,7 +19,7 @@ struct Contact: Codable {
     init() {
         about = ""
         phone = ""
-        logo = ""
+        logo = URL(string: "http://www.google.com")!
         email = ""
         company = ""
         name = ""
@@ -76,18 +76,17 @@ class CustomTableViewController: UITableViewController {
 
         name.text = contacts[indexPath.row].name
         company.text = contacts[indexPath.row].company
-
-        let url = contacts[indexPath.row].logo
         
-//        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-//            if error != nil {
-//                print(error!)
-//                return
-//            }
-//            DispatchQueue.main.async {
-//                logo.image = UIImage(data: data!)
-//            }
-//        }).resume()
+        let url = contacts[indexPath.row].logo
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            DispatchQueue.main.async {
+                logo.image = UIImage(data: data!)
+            }
+        }).resume()
         return cell
     }
     
