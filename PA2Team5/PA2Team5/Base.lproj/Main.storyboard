@@ -121,6 +121,9 @@
                                         <state key="normal" title="Location">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="locationButton:" destination="g5w-M7-GND" eventType="touchUpInside" id="fWt-YZ-k6V"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
@@ -172,7 +175,7 @@
                         <viewLayoutGuide key="safeArea" id="GeW-S2-ohh"/>
                     </view>
                     <connections>
-                        <outlet property="imgLogo" destination="6Pj-Pm-3ek" id="9hc-X9-4c7"/>
+                        <outlet property="imageLogo" destination="6Pj-Pm-3ek" id="Be5-Jd-ZLy"/>
                         <segue destination="8B1-JZ-dw4" kind="show" id="z4c-Ef-cC3"/>
                     </connections>
                 </viewController>
