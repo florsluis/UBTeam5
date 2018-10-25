@@ -30,7 +30,8 @@ class MapViewController: UIViewController {
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let location = CLLocationCoordinate2DMake(contactData.hq_latitude, contactData.hq_longitude)
         let region = MKCoordinateRegionMake(location, span)
-        
+        mapView.setRegion(region, animated: true)
+        self.mapView.showsUserLocation = true
         let location2 = CLLocation(latitude: self.contactData.hq_latitude, longitude: self.contactData.hq_longitude)
         
         CLGeocoder().reverseGeocodeLocation(location2) {
@@ -42,6 +43,9 @@ class MapViewController: UIViewController {
                     annotation.coordinate = location
                     annotation.title = "\(self.contactData.company)"
                     annotation.subtitle = "\(place.locality!), \(place.administrativeArea!), \(place.isoCountryCode!)"
+                    DispatchQueue.main.async {
+                        self.mapView.addAnnotation(annotation)
+                    }
                 }
             }
         }
