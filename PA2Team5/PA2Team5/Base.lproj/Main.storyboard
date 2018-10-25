@@ -176,7 +176,7 @@
                     </view>
                     <connections>
                         <outlet property="imageLogo" destination="6Pj-Pm-3ek" id="Be5-Jd-ZLy"/>
-                        <segue destination="8B1-JZ-dw4" kind="show" id="z4c-Ef-cC3"/>
+                        <segue destination="8B1-JZ-dw4" kind="show" identifier="detailsToMap" id="z4c-Ef-cC3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNZ-tl-1Hw" sceneMemberID="firstResponder"/>

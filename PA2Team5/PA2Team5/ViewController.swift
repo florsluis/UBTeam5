@@ -26,7 +26,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func locationButton(_ sender: Any) {
-        
+        performSegue(withIdentifier: "detailsToMap", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let mapSegue = segue.destination as! MapViewController
+        mapSegue.contactData = self.contactData
     }
     
     
