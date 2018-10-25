@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="2437.5999999999999" y="124.58770614692655"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Ijv-dk-4Aq">
             <objects>
-                <viewController id="8B1-JZ-dw4" customClass="ViewController" customModule="PA2Team5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8B1-JZ-dw4" customClass="MapViewController" customModule="PA2Team5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nHV-de-vSb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +202,7 @@
                         <viewLayoutGuide key="safeArea" id="2JW-Fg-jrl"/>
                     </view>
                     <connections>
-                        <outlet property="mpView" destination="l5G-7Q-lSx" id="jdD-1d-YSO"/>
+                        <outlet property="mapView" destination="l5G-7Q-lSx" id="F32-Hu-MR9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fq1-fe-gLb" sceneMemberID="firstResponder"/>

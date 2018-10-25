@@ -13,6 +13,7 @@
 		FE868731218248ED004B32B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE86872F218248ED004B32B2 /* Main.storyboard */; };
 		FE868733218248EF004B32B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE868732218248EF004B32B2 /* Assets.xcassets */; };
 		FE868736218248EF004B32B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE868734218248EF004B32B2 /* LaunchScreen.storyboard */; };
+		FECD3B0921827DC900182598 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD3B0821827DC900182598 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FE868732218248EF004B32B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE868735218248EF004B32B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE868737218248EF004B32B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECD3B0821827DC900182598 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				FE86872B218248ED004B32B2 /* AppDelegate.swift */,
 				FE86872D218248ED004B32B2 /* ViewController.swift */,
+				FECD3B0821827DC900182598 /* MapViewController.swift */,
 				F1DB056621824D18003A4A35 /* CustomTableViewController.swift */,
 				FE86872F218248ED004B32B2 /* Main.storyboard */,
 				FE868732218248EF004B32B2 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				FE86872E218248ED004B32B2 /* ViewController.swift in Sources */,
 				F1DB056721824D18003A4A35 /* CustomTableViewController.swift in Sources */,
 				FE86872C218248ED004B32B2 /* AppDelegate.swift in Sources */,
+				FECD3B0921827DC900182598 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
