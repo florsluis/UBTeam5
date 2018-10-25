@@ -42,28 +42,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //Need to populate the data
-        print("The id is: \(contactData._id)")
-        //id.text = "id: \(contactData._id)"
+        id.text = "id: \(contactData._id)"
         phone.text = "phone: \(contactData.phone)"
         email.text = "email: \(contactData.email)"
         age.text = "age: \(contactData.age)"
         about.text = "about: \(contactData.about)"
         imageLogo.image = LogoImage
         imageLogo.image = convertToVintage(image: imageLogo.image!, context: context)
-        
-//        let url = contactData.logo
-//        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-//            if error != nil {
-//                print(error!)
-//                return
-//            }
-//            DispatchQueue.main.async {
-//                self.imageLogo.image = UIImage(data: data!)
-//            }
-//        }).resume()
-        
-        
-//        imageLogo.image = convertToVintage(image: imageLogo.image!, context: context)
         
         
     }

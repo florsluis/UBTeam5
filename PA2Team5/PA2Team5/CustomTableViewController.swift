@@ -76,7 +76,7 @@ class CustomTableViewController: UITableViewController {
         let logo = cell.viewWithTag(3) as! UIImageView
 
         name.text = contacts[indexPath.row].name
-        company.text = contacts[indexPath.row].company
+        company.text = contacts[indexPath.row].company.capitalized
         
         let url = contacts[indexPath.row].logo
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
