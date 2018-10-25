@@ -79,15 +79,15 @@ class CustomTableViewController: UITableViewController {
 
         let url = contacts[indexPath.row].logo
         
-        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            if error != nil {
-                print(error!)
-                return
-            }
-            DispatchQueue.main.async {
-                logo.image = UIImage(data: data!)
-            }
-        }).resume()
+//        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+//            if error != nil {
+//                print(error!)
+//                return
+//            }
+//            DispatchQueue.main.async {
+//                logo.image = UIImage(data: data!)
+//            }
+//        }).resume()
         return cell
     }
     
