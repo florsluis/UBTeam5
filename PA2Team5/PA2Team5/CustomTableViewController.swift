@@ -110,7 +110,7 @@ class CustomTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "listToDetails" {
             let destinationVC = segue.destination as! ViewController
-//            destinationVC.contact = selectedContact
+            destinationVC.contact = selectedContact
         }
     }
 }
