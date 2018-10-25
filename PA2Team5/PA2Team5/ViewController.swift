@@ -13,6 +13,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     @IBOutlet weak var imageLogo: UIImageView!
     
     //Mark - Data Labels
@@ -23,6 +24,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var about: UILabel!
     
     var contactData = Contact()
+    var context = CIContext()
+    var LogoImage: UIImage?
+    
+    func convertToVintage(image: UIImage, context: CIContext) -> UIImage
+    {
+        let inputCIImage = CIImage(image: image)
+        let filter = CIFilter(name: "CIPhotoEffectInstant")!
+        filter.setValue(inputCIImage, forKey: kCIInputImageKey)
+        let ciImage = filter.outputImage
+        let cgImage = context.createCGImage(ciImage!, from: (ciImage?.extent)!)
+        return UIImage(cgImage: cgImage!)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,17 +48,22 @@ class ViewController: UIViewController {
         email.text = "email: \(contactData.email)"
         age.text = "age: \(contactData.age)"
         about.text = "about: \(contactData.about)"
+        imageLogo.image = LogoImage
+        imageLogo.image = convertToVintage(image: imageLogo.image!, context: context)
         
-        let url = contactData.logo
-        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            if error != nil {
-                print(error!)
-                return
-            }
-            DispatchQueue.main.async {
-                self.imageLogo.image = UIImage(data: data!)
-            }
-        }).resume()
+//        let url = contactData.logo
+//        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+//            if error != nil {
+//                print(error!)
+//                return
+//            }
+//            DispatchQueue.main.async {
+//                self.imageLogo.image = UIImage(data: data!)
+//            }
+//        }).resume()
+        
+        
+//        imageLogo.image = convertToVintage(image: imageLogo.image!, context: context)
         
         
     }

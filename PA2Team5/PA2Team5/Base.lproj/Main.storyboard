@@ -175,7 +175,12 @@
                         <viewLayoutGuide key="safeArea" id="GeW-S2-ohh"/>
                     </view>
                     <connections>
-                        <outlet property="imageLogo" destination="6Pj-Pm-3ek" id="Be5-Jd-ZLy"/>
+                        <outlet property="about" destination="W0X-Js-0OW" id="2pd-Eq-MCw"/>
+                        <outlet property="age" destination="IR7-Wg-2sT" id="iKy-xy-XmF"/>
+                        <outlet property="email" destination="uEW-0I-gRy" id="kqJ-t2-o3x"/>
+                        <outlet property="id" destination="Ui9-Gv-MMQ" id="yhX-0D-XqO"/>
+                        <outlet property="imageLogo" destination="6Pj-Pm-3ek" id="eB6-cQ-pbC"/>
+                        <outlet property="phone" destination="uVX-4V-vfg" id="5Uy-BE-bYX"/>
                         <segue destination="8B1-JZ-dw4" kind="show" identifier="detailsToMap" id="z4c-Ef-cC3"/>
                     </connections>
                 </viewController>

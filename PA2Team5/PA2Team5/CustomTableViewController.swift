@@ -36,6 +36,7 @@ class CustomTableViewController: UITableViewController {
 
     var contacts = [Contact]()
     var selectedContact = Contact()
+    var LogoImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +105,9 @@ class CustomTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedContact = contacts[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let logo = cell.viewWithTag(3) as! UIImageView
+        LogoImage = logo.image
         self.performSegue(withIdentifier: "listToDetails", sender: self)
     }
     
@@ -111,6 +115,7 @@ class CustomTableViewController: UITableViewController {
         if segue.identifier == "listToDetails" {
             let destinationVC = segue.destination as! ViewController
             destinationVC.contactData = selectedContact
+            destinationVC.LogoImage = LogoImage
         }
     }
 }
