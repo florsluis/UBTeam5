@@ -29,7 +29,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //Need to populate the data
-        id.text = "id: \(contactData._id)"
+        print("The id is: \(contactData._id)")
+        //id.text = "id: \(contactData._id)"
         phone.text = "phone: \(contactData.phone)"
         email.text = "email: \(contactData.email)"
         age.text = "age: \(contactData.age)"
