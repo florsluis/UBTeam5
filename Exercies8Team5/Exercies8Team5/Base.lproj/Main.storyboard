@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercies8Team5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96p-0X-JBL" userLabel="top">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.47195452450000003" green="0.94207358360000004" blue="0.95570069550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ew7-aE-Q8a"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beE-R8-URk" userLabel="bottom">
+                                <rect key="frame" x="0.0" y="647" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.82005131239999995" green="0.5430697203" blue="0.20442926880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="zlj-Sm-2NN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5h-ag-sXn" userLabel="left">
+                                <rect key="frame" x="0.0" y="20" width="20" height="627"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Ncf-4p-p5A"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="aPZ-Oe-fCE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJH-EG-giA" userLabel="right">
+                                <rect key="frame" x="355" y="20" width="20" height="627"/>
+                                <color key="backgroundColor" red="0.4392096996" green="0.81400161979999996" blue="0.5377283692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="9ST-Hz-jaL"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="0Tc-77-ear" userLabel="image">
+                                <rect key="frame" x="172.5" y="303.5" width="30" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Tc-77-ear" secondAttribute="height" multiplier="123:245" id="rUm-5b-WrL"/>
+                                    <constraint firstAttribute="height" constant="60" id="xw1-EZ-Htx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Tc-77-ear" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8zI-Gh-Ad9"/>
+                            <constraint firstItem="Z5h-ag-sXn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DUQ-JT-2cW"/>
+                            <constraint firstItem="PJH-EG-giA" firstAttribute="top" secondItem="96p-0X-JBL" secondAttribute="bottom" id="ERS-WY-IeL"/>
+                            <constraint firstItem="beE-R8-URk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F9S-xt-xSE"/>
+                            <constraint firstItem="beE-R8-URk" firstAttribute="top" secondItem="PJH-EG-giA" secondAttribute="bottom" id="GQ4-ao-grC"/>
+                            <constraint firstItem="0Tc-77-ear" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IvT-Dr-HHO"/>
+                            <constraint firstItem="96p-0X-JBL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LVc-xg-WdQ"/>
+                            <constraint firstItem="96p-0X-JBL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RKE-j7-bQH"/>
+                            <constraint firstItem="beE-R8-URk" firstAttribute="top" secondItem="Z5h-ag-sXn" secondAttribute="bottom" id="fJD-Qc-mld"/>
+                            <constraint firstAttribute="trailing" secondItem="beE-R8-URk" secondAttribute="trailing" id="mgi-bq-gJT"/>
+                            <constraint firstItem="Z5h-ag-sXn" firstAttribute="top" secondItem="96p-0X-JBL" secondAttribute="bottom" id="qVw-Mb-5ep"/>
+                            <constraint firstItem="PJH-EG-giA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rGl-b4-GWw"/>
+                            <constraint firstItem="beE-R8-URk" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="xPj-oV-RDq"/>
+                            <constraint firstAttribute="trailing" secondItem="96p-0X-JBL" secondAttribute="trailing" id="xa2-ef-5hw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="376.80000000000001" y="312.59370314842579"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plane" width="123.36000061035156" height="245.75999450683594"/>
+    </resources>
 </document>
