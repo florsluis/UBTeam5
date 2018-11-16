@@ -73,6 +73,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomBorder" destination="Z5h-ag-sXn" id="rMt-yz-n7W"/>
+                        <outlet property="leftBorder" destination="96p-0X-JBL" id="7Ku-Gj-4dQ"/>
+                        <outlet property="rightBorder" destination="beE-R8-URk" id="6tZ-OX-M84"/>
+                        <outlet property="topBorder" destination="PJH-EG-giA" id="X1z-uV-f9t"/>
+                        <outlet property="vehicleImage" destination="0Tc-77-ear" id="KrN-fh-7tw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
